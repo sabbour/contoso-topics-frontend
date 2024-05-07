@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: contoso-names-frontend
+  name: test
   labels:
-    app: contoso-names-frontend
-  namespace: contoso-names
+    app: test
+  namespace: test
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: contoso-names-frontend
+      app: test
   template:
     metadata:
       labels:
-        app: contoso-names-frontend
+        app: test
     spec:
       containers:
-        - name: contoso-names-frontend
-          image: aksappenvacruwe.azurecr.io/contoso-names-frontend:latest
+        - name: test
+          image: automaticacruksouth.azurecr.io/test:latest
           ports:
             - containerPort: 3000

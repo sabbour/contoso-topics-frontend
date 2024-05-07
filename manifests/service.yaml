@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: contoso-names-frontend
-  namespace: contoso-names
+  name: test
+  namespace: test
 spec:
   type: LoadBalancer
   selector:
-    app: contoso-names-frontend
+    app: test
   ports:
     - protocol: TCP
       port: 3000
